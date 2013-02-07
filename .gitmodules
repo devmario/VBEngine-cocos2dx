@@ -1,0 +1,6 @@
+[submodule "cocos2d-x"]
+	path = cocos2d-x
+	url = https://github.com/devmario/cocos2d-x.git
+[submodule "VBEngine"]
+	path = VBEngine
+	url = https://github.com/devmario/VBEngine.git
