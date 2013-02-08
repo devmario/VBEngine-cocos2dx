@@ -526,6 +526,23 @@
 				DSTROOT = /tmp/VBEngine_cocos2dx.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VBEngine-cocos2dx/VBEngine-cocos2dx-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					USE_FILE32API,
+					CC_TARGET_OS_IPHONE,
+					"COCOS2D_DEBUG=1",
+					_VB_IPHONE_,
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/include/libxml2/\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/include\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/support\"",
+					"\"$(SRCROOT)/../VBEngine\"/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -538,6 +555,20 @@
 				DSTROOT = /tmp/VBEngine_cocos2dx.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VBEngine-cocos2dx/VBEngine-cocos2dx-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					USE_FILE32API,
+					CC_TARGET_OS_IPHONE,
+					_VB_IPHONE_,
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/include/libxml2/\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/include\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/support\"",
+					"\"$(SRCROOT)/../VBEngine\"/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -1,5 +1,4 @@
 #include "VBModel.h"
-#include "AppDelegate.h"
 #include "VBEngine.h"
 
 int _VBModelDepthSort(const void* _a, const void* _b) {
