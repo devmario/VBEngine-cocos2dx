@@ -8,7 +8,7 @@ using namespace cocos2d;
 
 class VBResponder {
 private:
-	list<VBResponder*>::iterator responder_iterator;
+	std::list<VBResponder*>::iterator responder_iterator;
 	bool is_active;
 	std::string tag;
 	

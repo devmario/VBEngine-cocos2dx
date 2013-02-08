@@ -41,11 +41,11 @@ void VBButton::TouchBegin(CCTouch* _touch) {
         return;
 	if(is_always_event) {
 		touch = _touch;
-		protocol->ButtonTouchDown(this, model_area->IsHitByPoint(_touch->locationInView()));
+		protocol->ButtonTouchDown(this, model_area->IsHitByPoint(_touch->getLocationInView()));
 	} else {
 		if(touch)
 			return;
-		bool _hit = model_area->IsHitByPoint(_touch->locationInView());
+		bool _hit = model_area->IsHitByPoint(_touch->getLocationInView());
 		if(_hit)
 			touch = _touch;
 		protocol->ButtonTouchDown(this, _hit);
@@ -62,11 +62,11 @@ void VBButton::TouchEnd(CCTouch* _touch) {
     if(!model)
         return;
 	if(is_always_event) {
-		protocol->ButtonTouchUp(this, model_area->IsHitByPoint(_touch->locationInView()));
+		protocol->ButtonTouchUp(this, model_area->IsHitByPoint(_touch->getLocationInView()));
 	} else {
 		if(_touch != touch)
 			return;
-		protocol->ButtonTouchUp(this, model_area->IsHitByPoint(_touch->locationInView()));
+		protocol->ButtonTouchUp(this, model_area->IsHitByPoint(_touch->getLocationInView()));
 	}
 	touch = NULL;
 }

@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "CCConfiguration.h"
+//#include "CCConfiguration.h"
 #include "CCStreamTexture2D.h"
 #include "ccUtils.h"
 
