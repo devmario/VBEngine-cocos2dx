@@ -14,7 +14,7 @@ VBModel::VBModel(CCTexture2D* _tex) {
 	
 	CCRect rect = CCRectZero;
 	rect.size = _tex->getContentSize();
-	setTextureRect(rect);
+    cocos2d::CCSprite::setTextureRect(rect);
 	setBlendFunc((ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
 }
 

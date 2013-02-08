@@ -2,7 +2,7 @@
 
 void VBModel::InitWithLibName(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBObjectFile2DLibraryNameID* _library_name_id, bool _is_realtime_animation) {
     init();
-	
+    
 	use_mix_color = true;
     
     is_use_animation = true;
@@ -31,11 +31,17 @@ void VBModel::InitWithLibName(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBO
         }
 		
 		setTexture(_texture);
-        setTextureRect(CCRect(_txc[0].x * _texture->getPixelsWide() / CCDirector::sharedDirector()->getContentScaleFactor(),
-							  _txc[0].y * _texture->getPixelsHigh() / CCDirector::sharedDirector()->getContentScaleFactor(),
-							  (_txc[2].x * _texture->getPixelsWide() - _txc[0].x * _texture->getPixelsWide()) / CCDirector::sharedDirector()->getContentScaleFactor(),
-							  (_txc[2].y  * _texture->getPixelsHigh() - _txc[0].y * _texture->getPixelsHigh()) / CCDirector::sharedDirector()->getContentScaleFactor())
-					   );
+        cocos2d::CCSprite::setTextureRect(CCRect(_txc[0].x * _texture->getPixelsWide(),
+                                                 _txc[0].y * _texture->getPixelsHigh(),
+                                                 (_txc[2].x * _texture->getPixelsWide() - _txc[0].x * _texture->getPixelsWide()),
+                                                 (_txc[2].y  * _texture->getPixelsHigh() - _txc[0].y * _texture->getPixelsHigh()))
+                                          );
+
+//        cocos2d::CCSprite::setTextureRect(CCRect(_txc[0].x * _texture->getPixelsWide() / CCDirector::sharedDirector()->getContentScaleFactor(),
+//							  _txc[0].y * _texture->getPixelsHigh() / CCDirector::sharedDirector()->getContentScaleFactor(),
+//							  (_txc[2].x * _texture->getPixelsWide() - _txc[0].x * _texture->getPixelsWide()) / CCDirector::sharedDirector()->getContentScaleFactor(),
+//							  (_txc[2].y  * _texture->getPixelsHigh() - _txc[0].y * _texture->getPixelsHigh()) / CCDirector::sharedDirector()->getContentScaleFactor())
+//					   );
     } else if(VBObjectFile2DLibraryType_Graphic == VBObjectFile2DLibraryGetType(_library) || VBObjectFile2DLibraryType_MovieClip == VBObjectFile2DLibraryGetType(_library)) {
         frame_all_allocated_child_models = VBArrayVectorInit(VBArrayVectorAlloc());
         frame_willFree_child_models = VBArrayVectorInit(VBArrayVectorAlloc());

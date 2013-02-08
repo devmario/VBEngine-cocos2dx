@@ -1,4 +1,6 @@
 #include "VBModel.h"
+#include "AppDelegate.h"
+#include "VBEngine.h"
 
 int _VBModelDepthSort(const void* _a, const void* _b) {
     VBModelDepthSorter** _sorter_a = (VBModelDepthSorter**)_a;
@@ -155,10 +157,9 @@ void VBModel::Update(float _tick, bool _is_top) {
 		setOpacity(mix_color.a);
     }
 	
-    if(getChildren()) {
-        for(int i = 0; i < getChildren()->count(); i++) {
-            VBModel* _child =  (VBModel*)getChildren()->objectAtIndex(i);
-            _child->Update(_tick);
-        }
-    }
+    CCArray* children = getChildren();
+    for (int i=0; i<getChildrenCount(); i++) {
+        VBModel* _child =  (VBModel*)(children->objectAtIndex(i));
+        _child->Update(_tick);
+    }    
 }

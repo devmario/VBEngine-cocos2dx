@@ -37,37 +37,39 @@ bool VBModel::init(void) {
 	return true;
 }
 
-void VBModel::setTextureRectInPixels(const CCRect& rect, bool rotated, const CCSize& size) {
-    m_obRectInPixels = rect;
-	m_obRect = CC_RECT_PIXELS_TO_POINTS(rect);
-	m_bRectRotated = rotated;
+void VBModel::setTextureRect(const cocos2d::CCRect &rect, bool rotated, const cocos2d::CCSize &untrimmedSize) {
     
-	setContentSizeInPixels(size);
-	updateTextureCoords(m_obRectInPixels);
+    m_bRectRotated = rotated;
     
-	CCPoint relativeOffsetInPixels = m_obUnflippedOffsetPositionFromCenter;
+    setContentSize(untrimmedSize);
     
-	if(m_bFlipX)
-		relativeOffsetInPixels.x = -relativeOffsetInPixels.x;
-	if(m_bFlipY)
-		relativeOffsetInPixels.y = -relativeOffsetInPixels.y;
+    m_obRect = CC_RECT_PIXELS_TO_POINTS(rect);
+    updateTextureCoords(m_obRect);
     
-	m_obOffsetPositionInPixels.x = relativeOffsetInPixels.x + (m_tContentSizeInPixels.width - m_obRectInPixels.size.width) / 2;
-	m_obOffsetPositionInPixels.y = relativeOffsetInPixels.y + (m_tContentSizeInPixels.height - m_obRectInPixels.size.height) / 2;
+    CCPoint relativeOffset = m_obUnflippedOffsetPositionFromCenter;
     
-	if (m_bUsesBatchNode)
-		m_bDirty = true;
-	else
-	{
+    if (m_bFlipX) {
+        relativeOffset.x = -relativeOffset.x;
+    }
+    if (m_bFlipY) {
+        relativeOffset.y = -relativeOffset.y;
+    }
+    
+    m_obOffsetPosition.x = relativeOffset.x + (m_tContentSize.width - m_obRect.size.width) / 2;
+    m_obOffsetPosition.y = relativeOffset.y + (m_tContentSize.height - m_obRect.size.height) / 2;
+    
+    if (m_pobBatchNode) {
+        setDirty(true);
+    } else {
 		m_sQuad.bl.vertices = vertex3(0, 0, 0);
-		m_sQuad.br.vertices = vertex3(m_obRectInPixels.size.width, 0, 0);
-		m_sQuad.tl.vertices = vertex3(0, -m_obRectInPixels.size.height, 0);
-		m_sQuad.tr.vertices = vertex3(m_obRectInPixels.size.width, -m_obRectInPixels.size.height, 0);
-	}
+		m_sQuad.br.vertices = vertex3(m_obRect.size.width, 0, 0);
+		m_sQuad.tl.vertices = vertex3(0, -m_obRect.size.height, 0);
+		m_sQuad.tr.vertices = vertex3(m_obRect.size.width, -m_obRect.size.height, 0);
+    }
 }
 
 void VBModel::updateTextureCoords(const CCRect& rect) {
-    CCTexture2D *tex = m_bUsesBatchNode ? m_pobTextureAtlas->getTexture() : m_pobTexture;
+    CCTexture2D *tex = m_pobBatchNode ? m_pobTextureAtlas->getTexture() : m_pobTexture;
 	if(!tex)
 		return;
     
@@ -92,7 +94,7 @@ void VBModel::updateTextureCoords(const CCRect& rect) {
 }
 
 CCAffineTransform VBModel::nodeToParentTransform(void) {
-	if (m_bIsTransformDirty) {
+	if (m_bTransformDirty) {
         mat = VBMatrix2DWrapperLoadIdentity();
 		
         mat = VBMatrix2DWrapperSetPosition(mat, VBVector2DCreate(m_tPosition.x, m_tPosition.y));

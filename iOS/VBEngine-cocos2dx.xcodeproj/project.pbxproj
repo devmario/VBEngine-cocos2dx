@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC83A80816C4F3020091D69A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83A80716C4F3020091D69A /* Foundation.framework */; };
+		AC83A81716C4F3020091D69A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83A81616C4F3020091D69A /* SenTestingKit.framework */; };
+		AC83A81916C4F3020091D69A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83A81816C4F3020091D69A /* UIKit.framework */; };
+		AC83A81A16C4F3020091D69A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83A80716C4F3020091D69A /* Foundation.framework */; };
+		AC83A81D16C4F3020091D69A /* libVBEngine-cocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83A80416C4F3020091D69A /* libVBEngine-cocos2dx.a */; };
+		AC83A82316C4F3020091D69A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC83A82116C4F3020091D69A /* InfoPlist.strings */; };
+		AC83A82616C4F3020091D69A /* VBEngine_cocos2dxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC83A82516C4F3020091D69A /* VBEngine_cocos2dxTests.m */; };
+		AC83A85616C4F3470091D69A /* CCStreamImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84116C4F3470091D69A /* CCStreamImage.cpp */; };
+		AC83A85716C4F3470091D69A /* CCStreamImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84116C4F3470091D69A /* CCStreamImage.cpp */; };
+		AC83A85816C4F3470091D69A /* CCStreamTexture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84316C4F3470091D69A /* CCStreamTexture2D.cpp */; };
+		AC83A85916C4F3470091D69A /* CCStreamTexture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84316C4F3470091D69A /* CCStreamTexture2D.cpp */; };
+		AC83A85A16C4F3470091D69A /* OverlapTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84516C4F3470091D69A /* OverlapTester.cpp */; };
+		AC83A85B16C4F3470091D69A /* OverlapTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84516C4F3470091D69A /* OverlapTester.cpp */; };
+		AC83A85C16C4F3470091D69A /* VBButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84816C4F3470091D69A /* VBButton.cpp */; };
+		AC83A85D16C4F3470091D69A /* VBButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84816C4F3470091D69A /* VBButton.cpp */; };
+		AC83A85E16C4F3470091D69A /* VBResponder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84A16C4F3470091D69A /* VBResponder.cpp */; };
+		AC83A85F16C4F3470091D69A /* VBResponder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84A16C4F3470091D69A /* VBResponder.cpp */; };
+		AC83A86016C4F3470091D69A /* VBModelAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84D16C4F3470091D69A /* VBModelAnimation.cpp */; };
+		AC83A86116C4F3470091D69A /* VBModelAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84D16C4F3470091D69A /* VBModelAnimation.cpp */; };
+		AC83A86216C4F3470091D69A /* VBModelCollder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84E16C4F3470091D69A /* VBModelCollder.cpp */; };
+		AC83A86316C4F3470091D69A /* VBModelCollder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84E16C4F3470091D69A /* VBModelCollder.cpp */; };
+		AC83A86416C4F3470091D69A /* VBModelColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84F16C4F3470091D69A /* VBModelColor.cpp */; };
+		AC83A86516C4F3470091D69A /* VBModelColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A84F16C4F3470091D69A /* VBModelColor.cpp */; };
+		AC83A86616C4F3470091D69A /* VBModelConstruct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85016C4F3470091D69A /* VBModelConstruct.cpp */; };
+		AC83A86716C4F3470091D69A /* VBModelConstruct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85016C4F3470091D69A /* VBModelConstruct.cpp */; };
+		AC83A86816C4F3470091D69A /* VBModelPrivate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85116C4F3470091D69A /* VBModelPrivate.cpp */; };
+		AC83A86916C4F3470091D69A /* VBModelPrivate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85116C4F3470091D69A /* VBModelPrivate.cpp */; };
+		AC83A86A16C4F3470091D69A /* VBModelTracer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85216C4F3470091D69A /* VBModelTracer.cpp */; };
+		AC83A86B16C4F3470091D69A /* VBModelTracer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85216C4F3470091D69A /* VBModelTracer.cpp */; };
+		AC83A86C16C4F3470091D69A /* VBModelUpdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85316C4F3470091D69A /* VBModelUpdate.cpp */; };
+		AC83A86D16C4F3470091D69A /* VBModelUpdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85316C4F3470091D69A /* VBModelUpdate.cpp */; };
+		AC83A86E16C4F3470091D69A /* VBModelVertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85416C4F3470091D69A /* VBModelVertex.cpp */; };
+		AC83A86F16C4F3470091D69A /* VBModelVertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85416C4F3470091D69A /* VBModelVertex.cpp */; };
+		AC83A87016C4F3470091D69A /* VBModelVirtual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85516C4F3470091D69A /* VBModelVirtual.cpp */; };
+		AC83A87116C4F3470091D69A /* VBModelVirtual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85516C4F3470091D69A /* VBModelVirtual.cpp */; };
+		AC83A87216C4F37D0091D69A /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83A83E16C4F3300091D69A /* libcocos2dx.a */; };
+		AC83A87316C4F37F0091D69A /* libVBEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83A83516C4F31F0091D69A /* libVBEngine.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC83A81B16C4F3020091D69A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC83A7FC16C4F3020091D69A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC83A80316C4F3020091D69A;
+			remoteInfo = "VBEngine-cocos2dx";
+		};
+		AC83A83416C4F31F0091D69A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC83A82F16C4F31F0091D69A /* VBEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC83A6C016C4F1A10091D69A;
+			remoteInfo = VBEngine;
+		};
+		AC83A83616C4F31F0091D69A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC83A82F16C4F31F0091D69A /* VBEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC83A6D116C4F1A10091D69A;
+			remoteInfo = VBEngineTests;
+		};
+		AC83A83D16C4F3300091D69A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC83A83816C4F3300091D69A /* cocos2dx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC47220916C4D6FC00423A0D;
+			remoteInfo = cocos2dx;
+		};
+		AC83A83F16C4F3300091D69A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC83A83816C4F3300091D69A /* cocos2dx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC47221716C4D6FD00423A0D;
+			remoteInfo = cocos2dxTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC83A80216C4F3020091D69A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AC83A80416C4F3020091D69A /* libVBEngine-cocos2dx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libVBEngine-cocos2dx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC83A80716C4F3020091D69A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AC83A80B16C4F3020091D69A /* VBEngine-cocos2dx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VBEngine-cocos2dx-Prefix.pch"; sourceTree = "<group>"; };
+		AC83A81516C4F3020091D69A /* VBEngine-cocos2dxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VBEngine-cocos2dxTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC83A81616C4F3020091D69A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		AC83A81816C4F3020091D69A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		AC83A82016C4F3020091D69A /* VBEngine-cocos2dxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VBEngine-cocos2dxTests-Info.plist"; sourceTree = "<group>"; };
+		AC83A82216C4F3020091D69A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC83A82416C4F3020091D69A /* VBEngine_cocos2dxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBEngine_cocos2dxTests.h; sourceTree = "<group>"; };
+		AC83A82516C4F3020091D69A /* VBEngine_cocos2dxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBEngine_cocos2dxTests.m; sourceTree = "<group>"; };
+		AC83A82F16C4F31F0091D69A /* VBEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VBEngine.xcodeproj; path = ../VBEngine/iOS/VBEngine.xcodeproj; sourceTree = "<group>"; };
+		AC83A83816C4F3300091D69A /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = "../cocos2d-x/cocos2dx/proj.ios/cocos2dx.xcodeproj"; sourceTree = "<group>"; };
+		AC83A84116C4F3470091D69A /* CCStreamImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCStreamImage.cpp; path = ../../CCStreamImage.cpp; sourceTree = "<group>"; };
+		AC83A84216C4F3470091D69A /* CCStreamImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCStreamImage.h; path = ../../CCStreamImage.h; sourceTree = "<group>"; };
+		AC83A84316C4F3470091D69A /* CCStreamTexture2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCStreamTexture2D.cpp; path = ../../CCStreamTexture2D.cpp; sourceTree = "<group>"; };
+		AC83A84416C4F3470091D69A /* CCStreamTexture2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCStreamTexture2D.h; path = ../../CCStreamTexture2D.h; sourceTree = "<group>"; };
+		AC83A84516C4F3470091D69A /* OverlapTester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OverlapTester.cpp; path = ../../OverlapTester.cpp; sourceTree = "<group>"; };
+		AC83A84616C4F3470091D69A /* OverlapTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlapTester.h; path = ../../OverlapTester.h; sourceTree = "<group>"; };
+		AC83A84816C4F3470091D69A /* VBButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VBButton.cpp; sourceTree = "<group>"; };
+		AC83A84916C4F3470091D69A /* VBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBButton.h; sourceTree = "<group>"; };
+		AC83A84A16C4F3470091D69A /* VBResponder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VBResponder.cpp; sourceTree = "<group>"; };
+		AC83A84B16C4F3470091D69A /* VBResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBResponder.h; sourceTree = "<group>"; };
+		AC83A84C16C4F3470091D69A /* VBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBModel.h; path = ../../VBModel.h; sourceTree = "<group>"; };
+		AC83A84D16C4F3470091D69A /* VBModelAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelAnimation.cpp; path = ../../VBModelAnimation.cpp; sourceTree = "<group>"; };
+		AC83A84E16C4F3470091D69A /* VBModelCollder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelCollder.cpp; path = ../../VBModelCollder.cpp; sourceTree = "<group>"; };
+		AC83A84F16C4F3470091D69A /* VBModelColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelColor.cpp; path = ../../VBModelColor.cpp; sourceTree = "<group>"; };
+		AC83A85016C4F3470091D69A /* VBModelConstruct.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelConstruct.cpp; path = ../../VBModelConstruct.cpp; sourceTree = "<group>"; };
+		AC83A85116C4F3470091D69A /* VBModelPrivate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelPrivate.cpp; path = ../../VBModelPrivate.cpp; sourceTree = "<group>"; };
+		AC83A85216C4F3470091D69A /* VBModelTracer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelTracer.cpp; path = ../../VBModelTracer.cpp; sourceTree = "<group>"; };
+		AC83A85316C4F3470091D69A /* VBModelUpdate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelUpdate.cpp; path = ../../VBModelUpdate.cpp; sourceTree = "<group>"; };
+		AC83A85416C4F3470091D69A /* VBModelVertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelVertex.cpp; path = ../../VBModelVertex.cpp; sourceTree = "<group>"; };
+		AC83A85516C4F3470091D69A /* VBModelVirtual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelVirtual.cpp; path = ../../VBModelVirtual.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC83A80116C4F3020091D69A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83A80816C4F3020091D69A /* Foundation.framework in Frameworks */,
+				AC83A87216C4F37D0091D69A /* libcocos2dx.a in Frameworks */,
+				AC83A87316C4F37F0091D69A /* libVBEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC83A81116C4F3020091D69A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83A81716C4F3020091D69A /* SenTestingKit.framework in Frameworks */,
+				AC83A81916C4F3020091D69A /* UIKit.framework in Frameworks */,
+				AC83A81A16C4F3020091D69A /* Foundation.framework in Frameworks */,
+				AC83A81D16C4F3020091D69A /* libVBEngine-cocos2dx.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC83A7FB16C4F3020091D69A = {
+			isa = PBXGroup;
+			children = (
+				AC83A83816C4F3300091D69A /* cocos2dx.xcodeproj */,
+				AC83A82F16C4F31F0091D69A /* VBEngine.xcodeproj */,
+				AC83A80916C4F3020091D69A /* VBEngine-cocos2dx */,
+				AC83A81E16C4F3020091D69A /* VBEngine-cocos2dxTests */,
+				AC83A80616C4F3020091D69A /* Frameworks */,
+				AC83A80516C4F3020091D69A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC83A80516C4F3020091D69A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC83A80416C4F3020091D69A /* libVBEngine-cocos2dx.a */,
+				AC83A81516C4F3020091D69A /* VBEngine-cocos2dxTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC83A80616C4F3020091D69A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC83A80716C4F3020091D69A /* Foundation.framework */,
+				AC83A81616C4F3020091D69A /* SenTestingKit.framework */,
+				AC83A81816C4F3020091D69A /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC83A80916C4F3020091D69A /* VBEngine-cocos2dx */ = {
+			isa = PBXGroup;
+			children = (
+				AC83A84116C4F3470091D69A /* CCStreamImage.cpp */,
+				AC83A84216C4F3470091D69A /* CCStreamImage.h */,
+				AC83A84316C4F3470091D69A /* CCStreamTexture2D.cpp */,
+				AC83A84416C4F3470091D69A /* CCStreamTexture2D.h */,
+				AC83A84516C4F3470091D69A /* OverlapTester.cpp */,
+				AC83A84616C4F3470091D69A /* OverlapTester.h */,
+				AC83A84716C4F3470091D69A /* user_interface */,
+				AC83A84C16C4F3470091D69A /* VBModel.h */,
+				AC83A84D16C4F3470091D69A /* VBModelAnimation.cpp */,
+				AC83A84E16C4F3470091D69A /* VBModelCollder.cpp */,
+				AC83A84F16C4F3470091D69A /* VBModelColor.cpp */,
+				AC83A85016C4F3470091D69A /* VBModelConstruct.cpp */,
+				AC83A85116C4F3470091D69A /* VBModelPrivate.cpp */,
+				AC83A85216C4F3470091D69A /* VBModelTracer.cpp */,
+				AC83A85316C4F3470091D69A /* VBModelUpdate.cpp */,
+				AC83A85416C4F3470091D69A /* VBModelVertex.cpp */,
+				AC83A85516C4F3470091D69A /* VBModelVirtual.cpp */,
+				AC83A80A16C4F3020091D69A /* Supporting Files */,
+			);
+			path = "VBEngine-cocos2dx";
+			sourceTree = "<group>";
+		};
+		AC83A80A16C4F3020091D69A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC83A80B16C4F3020091D69A /* VBEngine-cocos2dx-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC83A81E16C4F3020091D69A /* VBEngine-cocos2dxTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC83A82416C4F3020091D69A /* VBEngine_cocos2dxTests.h */,
+				AC83A82516C4F3020091D69A /* VBEngine_cocos2dxTests.m */,
+				AC83A81F16C4F3020091D69A /* Supporting Files */,
+			);
+			path = "VBEngine-cocos2dxTests";
+			sourceTree = "<group>";
+		};
+		AC83A81F16C4F3020091D69A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC83A82016C4F3020091D69A /* VBEngine-cocos2dxTests-Info.plist */,
+				AC83A82116C4F3020091D69A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC83A83016C4F31F0091D69A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC83A83516C4F31F0091D69A /* libVBEngine.a */,
+				AC83A83716C4F31F0091D69A /* VBEngineTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC83A83916C4F3300091D69A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC83A83E16C4F3300091D69A /* libcocos2dx.a */,
+				AC83A84016C4F3300091D69A /* cocos2dxTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC83A84716C4F3470091D69A /* user_interface */ = {
+			isa = PBXGroup;
+			children = (
+				AC83A84816C4F3470091D69A /* VBButton.cpp */,
+				AC83A84916C4F3470091D69A /* VBButton.h */,
+				AC83A84A16C4F3470091D69A /* VBResponder.cpp */,
+				AC83A84B16C4F3470091D69A /* VBResponder.h */,
+			);
+			name = user_interface;
+			path = ../../user_interface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC83A80316C4F3020091D69A /* VBEngine-cocos2dx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC83A82916C4F3020091D69A /* Build configuration list for PBXNativeTarget "VBEngine-cocos2dx" */;
+			buildPhases = (
+				AC83A80016C4F3020091D69A /* Sources */,
+				AC83A80116C4F3020091D69A /* Frameworks */,
+				AC83A80216C4F3020091D69A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VBEngine-cocos2dx";
+			productName = "VBEngine-cocos2dx";
+			productReference = AC83A80416C4F3020091D69A /* libVBEngine-cocos2dx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AC83A81416C4F3020091D69A /* VBEngine-cocos2dxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC83A82C16C4F3020091D69A /* Build configuration list for PBXNativeTarget "VBEngine-cocos2dxTests" */;
+			buildPhases = (
+				AC83A81016C4F3020091D69A /* Sources */,
+				AC83A81116C4F3020091D69A /* Frameworks */,
+				AC83A81216C4F3020091D69A /* Resources */,
+				AC83A81316C4F3020091D69A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC83A81C16C4F3020091D69A /* PBXTargetDependency */,
+			);
+			name = "VBEngine-cocos2dxTests";
+			productName = "VBEngine-cocos2dxTests";
+			productReference = AC83A81516C4F3020091D69A /* VBEngine-cocos2dxTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC83A7FC16C4F3020091D69A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = vanillabreeze;
+			};
+			buildConfigurationList = AC83A7FF16C4F3020091D69A /* Build configuration list for PBXProject "VBEngine-cocos2dx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AC83A7FB16C4F3020091D69A;
+			productRefGroup = AC83A80516C4F3020091D69A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AC83A83916C4F3300091D69A /* Products */;
+					ProjectRef = AC83A83816C4F3300091D69A /* cocos2dx.xcodeproj */;
+				},
+				{
+					ProductGroup = AC83A83016C4F31F0091D69A /* Products */;
+					ProjectRef = AC83A82F16C4F31F0091D69A /* VBEngine.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				AC83A80316C4F3020091D69A /* VBEngine-cocos2dx */,
+				AC83A81416C4F3020091D69A /* VBEngine-cocos2dxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AC83A83516C4F31F0091D69A /* libVBEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVBEngine.a;
+			remoteRef = AC83A83416C4F31F0091D69A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC83A83716C4F31F0091D69A /* VBEngineTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VBEngineTests.octest;
+			remoteRef = AC83A83616C4F31F0091D69A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC83A83E16C4F3300091D69A /* libcocos2dx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcocos2dx.a;
+			remoteRef = AC83A83D16C4F3300091D69A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC83A84016C4F3300091D69A /* cocos2dxTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = cocos2dxTests.octest;
+			remoteRef = AC83A83F16C4F3300091D69A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC83A81216C4F3020091D69A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83A82316C4F3020091D69A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC83A81316C4F3020091D69A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC83A80016C4F3020091D69A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83A85616C4F3470091D69A /* CCStreamImage.cpp in Sources */,
+				AC83A85816C4F3470091D69A /* CCStreamTexture2D.cpp in Sources */,
+				AC83A85A16C4F3470091D69A /* OverlapTester.cpp in Sources */,
+				AC83A85C16C4F3470091D69A /* VBButton.cpp in Sources */,
+				AC83A85E16C4F3470091D69A /* VBResponder.cpp in Sources */,
+				AC83A86016C4F3470091D69A /* VBModelAnimation.cpp in Sources */,
+				AC83A86216C4F3470091D69A /* VBModelCollder.cpp in Sources */,
+				AC83A86416C4F3470091D69A /* VBModelColor.cpp in Sources */,
+				AC83A86616C4F3470091D69A /* VBModelConstruct.cpp in Sources */,
+				AC83A86816C4F3470091D69A /* VBModelPrivate.cpp in Sources */,
+				AC83A86A16C4F3470091D69A /* VBModelTracer.cpp in Sources */,
+				AC83A86C16C4F3470091D69A /* VBModelUpdate.cpp in Sources */,
+				AC83A86E16C4F3470091D69A /* VBModelVertex.cpp in Sources */,
+				AC83A87016C4F3470091D69A /* VBModelVirtual.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC83A81016C4F3020091D69A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC83A82616C4F3020091D69A /* VBEngine_cocos2dxTests.m in Sources */,
+				AC83A85716C4F3470091D69A /* CCStreamImage.cpp in Sources */,
+				AC83A85916C4F3470091D69A /* CCStreamTexture2D.cpp in Sources */,
+				AC83A85B16C4F3470091D69A /* OverlapTester.cpp in Sources */,
+				AC83A85D16C4F3470091D69A /* VBButton.cpp in Sources */,
+				AC83A85F16C4F3470091D69A /* VBResponder.cpp in Sources */,
+				AC83A86116C4F3470091D69A /* VBModelAnimation.cpp in Sources */,
+				AC83A86316C4F3470091D69A /* VBModelCollder.cpp in Sources */,
+				AC83A86516C4F3470091D69A /* VBModelColor.cpp in Sources */,
+				AC83A86716C4F3470091D69A /* VBModelConstruct.cpp in Sources */,
+				AC83A86916C4F3470091D69A /* VBModelPrivate.cpp in Sources */,
+				AC83A86B16C4F3470091D69A /* VBModelTracer.cpp in Sources */,
+				AC83A86D16C4F3470091D69A /* VBModelUpdate.cpp in Sources */,
+				AC83A86F16C4F3470091D69A /* VBModelVertex.cpp in Sources */,
+				AC83A87116C4F3470091D69A /* VBModelVirtual.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC83A81C16C4F3020091D69A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC83A80316C4F3020091D69A /* VBEngine-cocos2dx */;
+			targetProxy = AC83A81B16C4F3020091D69A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC83A82116C4F3020091D69A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC83A82216C4F3020091D69A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC83A82716C4F3020091D69A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC83A82816C4F3020091D69A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC83A82A16C4F3020091D69A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VBEngine_cocos2dx.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VBEngine-cocos2dx/VBEngine-cocos2dx-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AC83A82B16C4F3020091D69A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VBEngine_cocos2dx.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VBEngine-cocos2dx/VBEngine-cocos2dx-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AC83A82D16C4F3020091D69A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VBEngine-cocos2dx/VBEngine-cocos2dx-Prefix.pch";
+				INFOPLIST_FILE = "VBEngine-cocos2dxTests/VBEngine-cocos2dxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		AC83A82E16C4F3020091D69A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VBEngine-cocos2dx/VBEngine-cocos2dx-Prefix.pch";
+				INFOPLIST_FILE = "VBEngine-cocos2dxTests/VBEngine-cocos2dxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC83A7FF16C4F3020091D69A /* Build configuration list for PBXProject "VBEngine-cocos2dx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC83A82716C4F3020091D69A /* Debug */,
+				AC83A82816C4F3020091D69A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC83A82916C4F3020091D69A /* Build configuration list for PBXNativeTarget "VBEngine-cocos2dx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC83A82A16C4F3020091D69A /* Debug */,
+				AC83A82B16C4F3020091D69A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC83A82C16C4F3020091D69A /* Build configuration list for PBXNativeTarget "VBEngine-cocos2dxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC83A82D16C4F3020091D69A /* Debug */,
+				AC83A82E16C4F3020091D69A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC83A7FC16C4F3020091D69A /* Project object */;
+}
