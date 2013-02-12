@@ -55,8 +55,13 @@ void VBModel::setTextureRect(const cocos2d::CCRect &rect, bool rotated, const co
         relativeOffset.y = -relativeOffset.y;
     }
     
-    m_obOffsetPosition.x = relativeOffset.x + (m_tContentSize.width - m_obRect.size.width) / 2;
-    m_obOffsetPosition.y = relativeOffset.y + (m_tContentSize.height - m_obRect.size.height) / 2;
+	if(m_pobTexture) {
+		m_obOffsetPosition.x = relativeOffset.x + (m_pobTexture->getContentSize().width - m_obRect.size.width) / 2;
+		m_obOffsetPosition.y = relativeOffset.y + (m_pobTexture->getContentSize().height - m_obRect.size.height) / 2;
+	} else {
+		m_obOffsetPosition.x = relativeOffset.x + (0 - m_obRect.size.width) / 2;
+		m_obOffsetPosition.y = relativeOffset.y + (0 - m_obRect.size.height) / 2;
+	}
     
     if (m_pobBatchNode) {
         setDirty(true);
@@ -97,21 +102,22 @@ CCAffineTransform VBModel::nodeToParentTransform(void) {
 	if (m_bTransformDirty) {
         mat = VBMatrix2DWrapperLoadIdentity();
 		
-        mat = VBMatrix2DWrapperSetPosition(mat, VBVector2DCreate(m_tPosition.x, m_tPosition.y));
+        mat = VBMatrix2DWrapperSetPosition(mat, VBVector2DCreate(m_obPosition.x, m_obPosition.y));
         mat = VBMatrix2DWrapperSetScale(mat, VBVector2DCreate(m_fScaleX, m_fScaleY));
-        if(isnan(m_fRotation)) {
+		//m_fRotationX, m_fRotationY 적용필요
+        if(isnan(m_fRotationX)) {
             mat = VBMatrix2DWrapperSetShear(mat, VBVector2DCreate(-m_fSkewX, -m_fSkewY));
             mat = VBMatrix2DWrapperSetRotation(mat, NAN);
         } else {
-            mat = VBMatrix2DWrapperSetRotation(mat, -m_fRotation);
+            mat = VBMatrix2DWrapperSetRotation(mat, -m_fRotationX);
         }
-        mat = VBMatrix2DWrapperSetAnchor(mat, VBVector2DCreate(m_tAnchorPoint.x, m_tAnchorPoint.y));
+        mat = VBMatrix2DWrapperSetAnchor(mat, VBVector2DCreate(m_obAnchorPoint.x, m_obAnchorPoint.y));
         mat = VBMatrix2DWrapperUpdate(mat);
         
-		m_tTransform = CCAffineTransformMake(mat.mat.m11, mat.mat.m21, mat.mat.m12, mat.mat.m22, mat.mat.m13, mat.mat.m23);
+		m_sTransform = CCAffineTransformMake(mat.mat.m11, mat.mat.m21, mat.mat.m12, mat.mat.m22, mat.mat.m13, mat.mat.m23);
         
-		m_bIsTransformDirty = false;
+		m_bTransformDirty = false;
 	}
     
-	return m_tTransform;
+	return m_sTransform;
 }
