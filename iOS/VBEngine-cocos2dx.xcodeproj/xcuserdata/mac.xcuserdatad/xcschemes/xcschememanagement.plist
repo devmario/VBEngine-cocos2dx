@@ -7,7 +7,11 @@
 		<key>VBEngine-cocos2dxTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>7</integer>
+=======
+			<integer>4</integer>
+>>>>>>> fe52159a5a99b712fa60b08e2f3faa689fc2d94e
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
