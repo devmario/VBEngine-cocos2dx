@@ -31,12 +31,11 @@ void VBModel::InitWithLibName(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBO
         }
 		
 		setTexture(_texture);
-        cocos2d::CCSprite::setTextureRect(
-										  CCRect(_txc[0].x * _texture->getPixelsWide(),
-                                                 _txc[0].y * _texture->getPixelsHigh(),
-                                                 (_txc[2].x * _texture->getPixelsWide() - _txc[0].x * _texture->getPixelsWide()),
-                                                 (_txc[2].y  * _texture->getPixelsHigh() - _txc[0].y * _texture->getPixelsHigh()))
-										  );
+		CCRect _rect = CCRect(_txc[0].x * _texture->getPixelsWide(),
+							  _txc[0].y * _texture->getPixelsHigh(),
+							  (_txc[2].x * _texture->getPixelsWide() - _txc[0].x * _texture->getPixelsWide()),
+							  (_txc[2].y  * _texture->getPixelsHigh() - _txc[0].y * _texture->getPixelsHigh()));
+        cocos2d::CCSprite::setTextureRect(CC_RECT_POINTS_TO_PIXELS(_rect));
 
 //        cocos2d::CCSprite::setTextureRect(CCRect(_txc[0].x * _texture->getPixelsWide() / CCDirector::sharedDirector()->getContentScaleFactor(),
 //							  _txc[0].y * _texture->getPixelsHigh() / CCDirector::sharedDirector()->getContentScaleFactor(),
