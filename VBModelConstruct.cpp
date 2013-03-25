@@ -65,5 +65,5 @@ VBModel::~VBModel() {
         VBArrayVectorFree(&frame_all_allocated_child_models);
 	
 	if(getParent())
-		getParent()->removeChild(this, true);
+		getParent()->removeChild(this, false);
 }
