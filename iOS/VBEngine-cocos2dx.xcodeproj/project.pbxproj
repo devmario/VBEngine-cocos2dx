@@ -82,6 +82,20 @@
 			remoteGlobalIDString = AC47221716C4D6FD00423A0D;
 			remoteInfo = cocos2dxTests;
 		};
+		ACFBCA81170970930016725B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC83A82F16C4F31F0091D69A /* VBEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AC83A6BF16C4F1A00091D69A;
+			remoteInfo = VBEngine;
+		};
+		ACFBCA83170970930016725B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC83A83816C4F3300091D69A /* cocos2dx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AC47220816C4D6FC00423A0D;
+			remoteInfo = cocos2dx;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -283,6 +297,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				ACFBCA82170970930016725B /* PBXTargetDependency */,
+				ACFBCA84170970930016725B /* PBXTargetDependency */,
 			);
 			name = "VBEngine-cocos2dx";
 			productName = "VBEngine-cocos2dx";
@@ -454,6 +470,16 @@
 			isa = PBXTargetDependency;
 			target = AC83A80316C4F3020091D69A /* VBEngine-cocos2dx */;
 			targetProxy = AC83A81B16C4F3020091D69A /* PBXContainerItemProxy */;
+		};
+		ACFBCA82170970930016725B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VBEngine;
+			targetProxy = ACFBCA81170970930016725B /* PBXContainerItemProxy */;
+		};
+		ACFBCA84170970930016725B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = cocos2dx;
+			targetProxy = ACFBCA83170970930016725B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
