@@ -30,6 +30,11 @@ VBModel* VBButton::GetModel() {
 	return model;
 }
 
+void VBButton::SetActEnable(bool _enable) {
+	act_enable = _enable;
+	touch = NULL;
+}
+
 void VBButton::TouchBegin(CCTouch* _touch) {
 	if(!act_enable)
 		return;

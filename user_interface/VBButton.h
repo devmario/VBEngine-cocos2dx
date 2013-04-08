@@ -28,9 +28,7 @@ public:
 			 bool _is_always_event = false);
     virtual ~VBButton();
 	
-	void SetActEnable(bool _enable) {
-		act_enable = _enable;
-	}
+	void SetActEnable(bool _enable);
 	
 	bool GetActEnable() {
 		return act_enable;
