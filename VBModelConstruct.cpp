@@ -15,14 +15,15 @@ VBModel::VBModel(CCTexture2D* _tex) {
 	CCRect rect = CCRectZero;
 	rect.size = _tex->getContentSize();
     cocos2d::CCSprite::setTextureRect(rect);
-	setBlendFunc((ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
+	//GL_ONE, GL_ONE_MINUS_SRC_ALPHA
+	setBlendFunc((ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
 }
 
 VBModel::VBModel() : CCSprite() {
     init();
 	
 	use_mix_color = true;
-	setBlendFunc((ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
+	setBlendFunc((ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
 }
 
 VBModel::VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, const char* _lib_name, bool _is_realtime_animation) : CCSprite() {
@@ -36,12 +37,11 @@ VBModel::VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, const char* _lib
     } else {
 		assert(!(std::string("not found ") + _lib_name).c_str());
 	}
-	setBlendFunc((ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
 }
 
 VBModel::VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBObjectFile2DLibraryNameID* _library_name_id, bool _is_realtime_animation) : CCSprite() {
     InitWithLibName(_obj2D, _texture, _library_name_id, _is_realtime_animation);
-	setBlendFunc((ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
+	setBlendFunc((ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
 }
 
 
