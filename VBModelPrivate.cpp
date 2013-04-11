@@ -1,6 +1,6 @@
 #include "VBModel.h"
 
-void VBModel::InitWithLibName(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBObjectFile2DLibraryNameID* _library_name_id, bool _is_realtime_animation) {
+void VBModel::InitWithLibName(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBObjectFile2DLibraryNameID* _library_name_id, bool _is_realtime_animation, ccBlendFunc _blend) {
     init();
     
 	use_mix_color = true;
@@ -65,7 +65,7 @@ void VBModel::InitWithLibName(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBO
         for(int i = 0; i < frame->key_frame->len; i++) {
             VBObjectFile2DKeyFrame* _key_frame = (VBObjectFile2DKeyFrame*)frame->key_frame->data[i];
             if(frame_all_allocated_child_models->data[i] == NULL) {
-                VBModel* _child = new VBModel(_obj2D, _texture, _key_frame->library_id, _is_realtime_animation);
+                VBModel* _child = new VBModel(_obj2D, _texture, _key_frame->library_id, _is_realtime_animation, _blend);
                 frame_all_allocated_child_models->data[i] = _child;
                 VBArrayVectorAddBack(frame_willFree_child_models, _child);
                 LinkChildKeyFrames(i, _child, _key_frame);
@@ -73,6 +73,7 @@ void VBModel::InitWithLibName(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBO
         }
     }
     Update(0.0f);
+	setBlendFunc(_blend);
 }
 
 bool VBModel::LinkChildKeyFrames(int _currentIdx, VBModel* _child, VBObjectFile2DKeyFrame* _key_frame) {

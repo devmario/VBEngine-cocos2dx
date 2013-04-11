@@ -4,7 +4,7 @@
 #include "cocos2d.h"
 #include "OverlapTester.h"
 
-VBModel::VBModel(CCTexture2D* _tex) {
+VBModel::VBModel(CCTexture2D* _tex, ccBlendFunc _blend) {
     init();
 	
 	use_mix_color = true;
@@ -16,17 +16,16 @@ VBModel::VBModel(CCTexture2D* _tex) {
 	rect.size = _tex->getContentSize();
     cocos2d::CCSprite::setTextureRect(rect);
 	//GL_ONE, GL_ONE_MINUS_SRC_ALPHA
-	setBlendFunc((ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
+	setBlendFunc(_blend);
 }
 
 VBModel::VBModel() : CCSprite() {
     init();
 	
 	use_mix_color = true;
-	setBlendFunc((ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
 }
 
-VBModel::VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, const char* _lib_name, bool _is_realtime_animation) : CCSprite() {
+VBModel::VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, const char* _lib_name, bool _is_realtime_animation, ccBlendFunc _blend) : CCSprite() {
     VBString* _name = VBStringInitWithCString(VBStringAlloc(), _lib_name);
     VBObjectFile2DLibraryNameID* _name_id = VBObjectFile2DGetLibraryNameIDByName(_obj2D, _name);
     VBStringFree(&_name);
@@ -39,9 +38,8 @@ VBModel::VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, const char* _lib
 	}
 }
 
-VBModel::VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBObjectFile2DLibraryNameID* _library_name_id, bool _is_realtime_animation) : CCSprite() {
+VBModel::VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, VBObjectFile2DLibraryNameID* _library_name_id, bool _is_realtime_animation, ccBlendFunc _blend) : CCSprite() {
     InitWithLibName(_obj2D, _texture, _library_name_id, _is_realtime_animation);
-	setBlendFunc((ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
 }
 
 
