@@ -49,7 +49,7 @@ private:
 	
     void InitWithLibName(VBObjectFile2D* _obj2D, CCTexture2D* _texture, 
                          VBObjectFile2DLibraryNameID* _library_name_id, 
-                         bool _is_realtime_animation = true, ccBlendFunc _blend = (ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
+                         bool _is_realtime_animation = true, ccBlendFunc _blend = (ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
     bool LinkChildKeyFrames(int _current_idx, VBModel* _child, VBObjectFile2DKeyFrame* _key_frame);
     
 public:
@@ -60,7 +60,7 @@ public:
     //비어있는 Sprite생성
     VBModel();
     //해당텍스쳐로 Sprite를 생성
-    VBModel(CCTexture2D* _tex, ccBlendFunc _blend = (ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
+    VBModel(CCTexture2D* _tex, ccBlendFunc _blend = (ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
     //해당 에니메이션과 텍스쳐로 Sprite를 생성 
     //_obj2D:에니메이션 구조체 포인터
     //_texture:텍스쳐 구조체 포인터
@@ -69,7 +69,7 @@ public:
     VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, 
             const char* _lib_name, 
             bool _is_realtime_animation = true,
-			ccBlendFunc _blend = (ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
+			ccBlendFunc _blend = (ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
     //해당 에니메이션과 텍스쳐로 Sprite를 생성 
     //_obj2D:에니메이션 구조체 포인터
     //_texture:텍스쳐 구조체 포인터
@@ -78,7 +78,7 @@ public:
     VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, 
             VBObjectFile2DLibraryNameID* _library_name_id, 
             bool _is_realtime_animation = true,
-			ccBlendFunc _blend = (ccBlendFunc){GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA});
+			ccBlendFunc _blend = (ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
     
     virtual ~VBModel();
     
