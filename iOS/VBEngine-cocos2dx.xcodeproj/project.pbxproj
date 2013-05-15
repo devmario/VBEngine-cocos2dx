@@ -44,6 +44,8 @@
 		AC83A87116C4F3470091D69A /* VBModelVirtual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC83A85516C4F3470091D69A /* VBModelVirtual.cpp */; };
 		AC83A87216C4F37D0091D69A /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83A83E16C4F3300091D69A /* libcocos2dx.a */; };
 		AC83A87316C4F37F0091D69A /* libVBEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC83A83516C4F31F0091D69A /* libVBEngine.a */; };
+		ACB10AEA1741FB81002DF8D2 /* pattern_square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACB10AE81741FB81002DF8D2 /* pattern_square.cpp */; };
+		ACB10AEB1741FB81002DF8D2 /* pattern_square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACB10AE81741FB81002DF8D2 /* pattern_square.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		AC83A85316C4F3470091D69A /* VBModelUpdate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelUpdate.cpp; path = ../../VBModelUpdate.cpp; sourceTree = "<group>"; };
 		AC83A85416C4F3470091D69A /* VBModelVertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelVertex.cpp; path = ../../VBModelVertex.cpp; sourceTree = "<group>"; };
 		AC83A85516C4F3470091D69A /* VBModelVirtual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VBModelVirtual.cpp; path = ../../VBModelVirtual.cpp; sourceTree = "<group>"; };
+		ACB10AE81741FB81002DF8D2 /* pattern_square.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pattern_square.cpp; sourceTree = "<group>"; };
+		ACB10AE91741FB81002DF8D2 /* pattern_square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pattern_square.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,7 @@
 		AC83A80916C4F3020091D69A /* VBEngine-cocos2dx */ = {
 			isa = PBXGroup;
 			children = (
+				ACB10AE41741FB33002DF8D2 /* ui */,
 				AC83A84116C4F3470091D69A /* CCStreamImage.cpp */,
 				AC83A84216C4F3470091D69A /* CCStreamImage.h */,
 				AC83A84316C4F3470091D69A /* CCStreamTexture2D.cpp */,
@@ -281,6 +286,24 @@
 			);
 			name = user_interface;
 			path = ../../user_interface;
+			sourceTree = "<group>";
+		};
+		ACB10AE41741FB33002DF8D2 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				ACB10AE51741FB33002DF8D2 /* pattern */,
+			);
+			name = ui;
+			path = ../../ui;
+			sourceTree = "<group>";
+		};
+		ACB10AE51741FB33002DF8D2 /* pattern */ = {
+			isa = PBXGroup;
+			children = (
+				ACB10AE81741FB81002DF8D2 /* pattern_square.cpp */,
+				ACB10AE91741FB81002DF8D2 /* pattern_square.h */,
+			);
+			path = pattern;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +461,7 @@
 				AC83A86C16C4F3470091D69A /* VBModelUpdate.cpp in Sources */,
 				AC83A86E16C4F3470091D69A /* VBModelVertex.cpp in Sources */,
 				AC83A87016C4F3470091D69A /* VBModelVirtual.cpp in Sources */,
+				ACB10AEA1741FB81002DF8D2 /* pattern_square.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +484,7 @@
 				AC83A86D16C4F3470091D69A /* VBModelUpdate.cpp in Sources */,
 				AC83A86F16C4F3470091D69A /* VBModelVertex.cpp in Sources */,
 				AC83A87116C4F3470091D69A /* VBModelVirtual.cpp in Sources */,
+				ACB10AEB1741FB81002DF8D2 /* pattern_square.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
