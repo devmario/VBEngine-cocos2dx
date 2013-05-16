@@ -6,16 +6,20 @@ VBButton::VBButton(VBModel* _model,
 				   bool _is_always_event) :
 VBResponder(_responder_tag) {
 	act_enable = true;
+    protocol = _protocol;
+	is_always_event = _is_always_event;
+	set_model(_model);
+}
+
+VBButton::~VBButton() {
+}
+
+void VBButton::set_model(VBModel* _model) {
     model = _model;
     model_area = _model->GetChildByInstanceName("area");
     if(!model_area)
         model_area = model;
     touch = NULL;
-    protocol = _protocol;
-	is_always_event = _is_always_event;
-}
-
-VBButton::~VBButton() {
 }
 
 bool VBButton::GetIsDown() {

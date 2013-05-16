@@ -66,8 +66,8 @@ public:
     //_texture:텍스쳐 구조체 포인터
     //_lib_name:가져올 플래쉬 라이브러리 name
     //_is_realtime_animation:실시간 에니메이션 지원(false일 경우 frame단위로 에니메이션 계산, 테스팅 안됨)
-    VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture, 
-            const char* _lib_name, 
+    VBModel(VBObjectFile2D* _obj2D, CCTexture2D* _texture,
+            const char* _lib_name,
             bool _is_realtime_animation = true,
 			ccBlendFunc _blend = (ccBlendFunc){GL_ONE, GL_ONE_MINUS_SRC_ALPHA});
     //해당 에니메이션과 텍스쳐로 Sprite를 생성 

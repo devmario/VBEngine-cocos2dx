@@ -13,6 +13,13 @@
 #include "VBModel.h"
 
 class pattern_square : public VBModel {
+public:
+	typedef struct margin {
+		float l, t, r, b;
+		float w, h;
+	} margin;
+	
+	margin get_margin();
 private:
 	CCTexture2D* tex_grid;
 	

@@ -25,6 +25,19 @@ void pattern_square::setup_library(library* _lib, VBObjectFile2D* _obj, std::str
 	_lib->vtx = VBAABBCreate(0, 0, VBAABBGetWidth(_lib->uv) * tex_grid->getContentSizeInPixels().width, VBAABBGetHeight(_lib->uv) * tex_grid->getContentSizeInPixels().height);
 }
 
+pattern_square::margin pattern_square::get_margin() {
+	margin _margin;
+	
+	_margin.l = VBAABBGetWidth(grid.l.vtx);
+	_margin.t = VBAABBGetHeight(grid.t.vtx);
+	_margin.r = VBAABBGetWidth(grid.r.vtx);
+	_margin.b = VBAABBGetHeight(grid.b.vtx);
+	_margin.w = size_pattern.width - (_margin.l + _margin.r);
+	_margin.h = size_pattern.height - (_margin.t + _margin.b);
+	
+	return _margin;
+}
+
 void pattern_square::update_vtx() {
 	drawable_len = 6 * 9;
 	if(drawable == NULL) {
@@ -33,29 +46,19 @@ void pattern_square::update_vtx() {
 	}
 	ccV3F_C4B_T2F* _ptr = drawable;
 	
-	struct {
-		float l, t, r, b;
-		float w, h;
-	} margin;
+	margin _margin = get_margin();
 	
-	margin.l = VBAABBGetWidth(grid.l.vtx);
-	margin.t = VBAABBGetHeight(grid.t.vtx);
-	margin.r = VBAABBGetWidth(grid.r.vtx);
-	margin.b = VBAABBGetHeight(grid.b.vtx);
-	margin.w = size_pattern.width - (margin.l + margin.r);
-	margin.h = size_pattern.height - (margin.t + margin.b);
+	_ptr = setup_vtx(_ptr, &grid.lt, 	VBAABBCreate(0						,0						,_margin.l 					,_margin.t));
+	_ptr = setup_vtx(_ptr, &grid.t, 	VBAABBCreate(_margin.l				,0						,_margin.w 					,_margin.t));
+	_ptr = setup_vtx(_ptr, &grid.rt, 	VBAABBCreate(_margin.l + _margin.w	,0						,_margin.r 					,_margin.t));
 	
-	_ptr = setup_vtx(_ptr, &grid.lt, 	VBAABBCreate(0						,0						,margin.l 					,margin.t));
-	_ptr = setup_vtx(_ptr, &grid.t, 	VBAABBCreate(margin.l				,0						,margin.w 					,margin.t));
-	_ptr = setup_vtx(_ptr, &grid.rt, 	VBAABBCreate(margin.l + margin.w	,0						,margin.r 					,margin.t));
+	_ptr = setup_vtx(_ptr, &grid.l, 	VBAABBCreate(0						,_margin.t				,_margin.l 					,_margin.h));
+	_ptr = setup_vtx(_ptr, &grid.c, 	VBAABBCreate(_margin.l				,_margin.t				,_margin.w 					,_margin.h));
+	_ptr = setup_vtx(_ptr, &grid.r, 	VBAABBCreate(_margin.l + _margin.w	,_margin.t				,_margin.r 					,_margin.h));
 	
-	_ptr = setup_vtx(_ptr, &grid.l, 	VBAABBCreate(0						,margin.t				,margin.l 					,margin.h));
-	_ptr = setup_vtx(_ptr, &grid.c, 	VBAABBCreate(margin.l				,margin.t				,margin.w 					,margin.h));
-	_ptr = setup_vtx(_ptr, &grid.r, 	VBAABBCreate(margin.l + margin.w	,margin.t				,margin.r 					,margin.h));
-	
-	_ptr = setup_vtx(_ptr, &grid.lb, 	VBAABBCreate(0						,margin.t + margin.h	,margin.l 					,margin.b));
-	_ptr = setup_vtx(_ptr, &grid.b, 	VBAABBCreate(margin.l				,margin.t + margin.h	,margin.w 					,margin.b));
-	_ptr = setup_vtx(_ptr, &grid.rb, 	VBAABBCreate(margin.l + margin.w	,margin.t + margin.h	,margin.r 					,margin.b));
+	_ptr = setup_vtx(_ptr, &grid.lb, 	VBAABBCreate(0						,_margin.t + _margin.h	,_margin.l 					,_margin.b));
+	_ptr = setup_vtx(_ptr, &grid.b, 	VBAABBCreate(_margin.l				,_margin.t + _margin.h	,_margin.w 					,_margin.b));
+	_ptr = setup_vtx(_ptr, &grid.rb, 	VBAABBCreate(_margin.l + _margin.w	,_margin.t + _margin.h	,_margin.r 					,_margin.b));
 }
 
 ccV3F_C4B_T2F* pattern_square::setup_vtx(ccV3F_C4B_T2F* _drawable, library* _lib, VBAABB _aabb) {
