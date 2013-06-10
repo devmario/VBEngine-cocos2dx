@@ -576,6 +576,7 @@
 		AC83A82A16C4F3020091D69A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				DSTROOT = /tmp/VBEngine_cocos2dx.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VBEngine-cocos2dx/VBEngine-cocos2dx-Prefix.pch";
@@ -605,6 +606,7 @@
 		AC83A82B16C4F3020091D69A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				DSTROOT = /tmp/VBEngine_cocos2dx.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VBEngine-cocos2dx/VBEngine-cocos2dx-Prefix.pch";
